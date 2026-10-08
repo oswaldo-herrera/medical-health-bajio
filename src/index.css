@@ -1,0 +1,88 @@
+:root {
+  --color-brand-950: #041d26;
+  --color-brand-900: #062a36;
+  --color-brand-800: #083340;
+  --color-brand-700: #0b3b4a;
+  --color-brand-600: #0f5163;
+  --color-accent: #5fd4c4;
+  --color-accent-600: #1fa896;
+  --color-accent-700: #0e8577;
+  --color-on-brand: #f3fbfa;
+  --color-hero-text: #c3d3ec;
+  --color-ink: #0c2530;
+  --color-muted: #557079;
+  --color-line: #dbe7e8;
+  --color-bg: #f4f9f9;
+  --color-surface: #ffffff;
+
+  --radius: 1.25rem;
+  --shadow: 0 1px 2px rgb(6 42 54 / 0.04), 0 12px 32px -12px rgb(6 42 54 / 0.14);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
