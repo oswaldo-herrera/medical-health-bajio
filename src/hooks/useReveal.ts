@@ -1,13 +1,14 @@
 import { useEffect } from 'react'
 
-// Agrega .is-visible a cada [data-reveal] cuando entra al viewport
+// Marca cada [data-reveal] con data-revealed cuando entra al viewport.
+// Se usa un atributo propio (no una clase) para que React no lo borre al volver a renderizar.
 export function useReveal() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible')
+            entry.target.setAttribute('data-revealed', '')
             observer.unobserve(entry.target)
           }
         }

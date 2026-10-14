@@ -8,7 +8,6 @@ import {
   Ear,
   FileWarning,
   FlaskConical,
-  Gauge,
   GraduationCap,
   HeartPulse,
   Laptop,
@@ -16,16 +15,18 @@ import {
   Medal,
   Radiation,
   ScanLine,
-  ShieldCheck,
   Stethoscope,
   Timer,
   UserCheck,
-  Users,
   UserX,
   type LucideIcon,
 } from 'lucide-react'
 
 export const FOUNDED_YEAR = 2012
+
+// Cifras confirmadas por Medical and Health (octubre 2026)
+export const CLIENT_COUNT = 200
+export const MOBILE_UNIT_COUNT = 4
 
 export type Audience = 'empresa' | 'paciente'
 
@@ -188,13 +189,19 @@ export const services: Service[] = [
     list: [
       'Exploración física completa',
       'Análisis clínicos',
-      'Rayos X (columna y tórax)',
+      'Rayos X',
       'Audiometría',
       'Espirometría',
       'Electrocardiograma',
+      'Exámenes POE',
     ],
     outcomeTitle: 'Lo que recibes',
-    outcome: ['Diagnóstico médico', 'Condicionantes médicas', 'Recomendaciones y/o restricciones médicas'],
+    outcome: [
+      'Aptitud para laborar',
+      'Diagnóstico médico',
+      'Condicionantes médicas',
+      'Recomendaciones y/o restricciones médicas',
+    ],
   },
   {
     id: 'servicio-en-planta',
@@ -233,50 +240,6 @@ export const services: Service[] = [
       'Seguimiento médico a trabajadores',
       'Anexos al expediente médico',
       'Plan de acción sobre los padecimientos detectados',
-    ],
-  },
-  {
-    id: 'programas-sst',
-    icon: ShieldCheck,
-    title: 'Programas de seguridad y salud en el trabajo',
-    intro:
-      'Desarrollados y aplicados en acompañamiento con médico especialista en medicina del trabajo.',
-    listTitle: 'Programas disponibles',
-    list: [
-      'Evaluación y control de riesgos ergonómicos',
-      'Conservación de la audición',
-      'Riesgos a la salud por exposición a químicos',
-      'Conservación de la visión',
-      'Exposición a condiciones térmicas extremas',
-      'Prevención de riesgos por radiaciones ionizantes',
-      'Calidad del aire en interiores',
-      'Protección respiratoria',
-    ],
-  },
-  {
-    id: 'estudios-ambientales',
-    icon: Gauge,
-    title: 'Estudios ambientales de las condiciones de trabajo',
-    intro:
-      'Estudios ambientales e instrumentados para medir las condiciones reales en las que trabaja tu personal y actuar sobre datos.',
-    listTitle: 'Para qué sirve',
-    list: [
-      'Identificar las áreas de riesgo de tu planta',
-      'Definir qué estudios médicos necesita cada puesto',
-      'Dar sustento a tus programas preventivos',
-    ],
-  },
-  {
-    id: 'brigadas',
-    icon: Users,
-    title: 'Formación de brigadas de seguridad e higiene',
-    intro:
-      'Formamos y actualizamos a tus brigadas para que tu personal sepa cómo responder cuando más se necesita.',
-    listTitle: 'Qué obtienes',
-    list: [
-      'Formación de brigadas nuevas',
-      'Actualización de brigadas existentes',
-      'Personal preparado dentro de tu propia planta',
     ],
   },
 ]
@@ -362,49 +325,12 @@ export const certifications: Certification[] = [
   },
 ]
 
-export const clients = [
-  'Siemens',
-  'Dimeca',
-  'NPAMX',
-  'Orbis',
-  'Hiruta México',
-  'Mailhot',
-  'Lyrba',
-  'OSG Royco',
-  'Rotoplas',
-  'LKY',
-  'Yushiro',
-  'Flexi',
-  'Ashimori',
-  'TYASA',
-  'St. Johns Packaging',
-  'Nucor',
-  'American Industries',
-  'TMD',
-  'Bodycote',
-]
-
-export const managedClients = [
-  'Relats',
-  'Guala Dispensing México',
-  'K-Tech',
-  'Oshkosh',
-  'CEVA Logistics',
-  'Baumann',
-  'Novares',
-  'Usui',
-  'Kawada MX',
-  'Hino',
-  'Nidec',
-  'Tigerpoly Industria de México',
-]
-
 export const locations = [
   {
     name: 'Laboratorio y gabinete',
     zone: 'Zona Centro',
-    image: '/silao_centro.webp',
-    imagePosition: 'center 40%',
+    image: '/silao_centro_buena.webp',
+    imagePosition: 'center 45%',
     address: ['Álvaro Obregón #52, Zona Centro', 'C.P. 36100, Silao, Guanajuato'],
     mapQuery: 'Álvaro Obregón 52, Zona Centro, 36100 Silao, Guanajuato',
     groups: [
@@ -506,6 +432,5 @@ export const interestOptions = [
   'Servicio médico en planta',
   'Exámenes periódicos (POE)',
   'Unidad móvil en mis instalaciones',
-  'Programas de seguridad y salud',
   'Otro',
 ]

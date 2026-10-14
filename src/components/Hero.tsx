@@ -55,6 +55,11 @@ export default function Hero() {
         <span className="hero__grid" />
       </div>
 
+      <div className="hero__host" aria-hidden="true">
+        <span className="hero__host-glow" />
+        <img src="/avatar_masculino.webp" alt="" width={374} height={900} />
+      </div>
+
       <div className={`container hero__inner${SHOW_RECORD ? '' : ' hero__inner--solo'}`}>
         <div className="hero__copy">
           <div className="hero__toggle" data-reveal>

@@ -7,8 +7,13 @@ import { whatsappLink } from '../lib/whatsapp'
 export default function MobileUnit() {
   return (
     <section className="section section--dark mobile-unit" id="unidad-movil">
+      <div className="mobile-unit__bg" aria-hidden="true">
+        {['/unidad_01.webp', '/unidad_02.webp', '/unidad_03.webp'].map((src) => (
+          <span key={src} style={{ backgroundImage: `url(${src})` }} />
+        ))}
+      </div>
       <div className="mobile-unit__road" aria-hidden="true" />
-      <div className="container">
+      <div className="container mobile-unit__inner">
         <div className="section__head" data-reveal>
           <p className="eyebrow eyebrow--light">Unidad de diagnóstico clínica móvil</p>
           <h2 className="section__title">Llevamos la clínica a tu planta. Tu producción no se detiene.</h2>

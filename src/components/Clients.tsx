@@ -1,20 +1,14 @@
-import { clients, managedClients } from '../data/content'
+import { Car, Cog, Factory, MapPin, Truck } from 'lucide-react'
+import CountUp from './CountUp'
+import { CLIENT_COUNT } from '../data/content'
+import { delay } from '../lib/ui'
 
-function Marquee({ names, reverse = false }: { names: string[]; reverse?: boolean }) {
-  return (
-    <div className={`marquee${reverse ? ' marquee--reverse' : ''}`}>
-      <div className="marquee__track">
-        {[0, 1].map((copy) => (
-          <ul key={copy} aria-hidden={copy === 1}>
-            {names.map((name) => (
-              <li key={name}>{name}</li>
-            ))}
-          </ul>
-        ))}
-      </div>
-    </div>
-  )
-}
+const industries = [
+  { icon: Car, label: 'Automotriz' },
+  { icon: Cog, label: 'Autopartes' },
+  { icon: Truck, label: 'Logística' },
+  { icon: Factory, label: 'Manufacturera' },
+]
 
 export default function Clients() {
   return (
@@ -24,12 +18,30 @@ export default function Clients() {
           <p className="eyebrow">Nuestros clientes</p>
           <h2 className="section__title">Las empresas que mueven al Bajío ya cuidan a su gente con nosotros</h2>
         </div>
-      </div>
 
-      <div data-reveal>
-        <Marquee names={clients} />
-        <p className="clients__label">Servicios médicos administrados por Medical and Health</p>
-        <Marquee names={managedClients} reverse />
+        <div className="clients__panel" data-reveal>
+          <p className="clients__count">
+            Más de <CountUp end={CLIENT_COUNT} />
+          </p>
+          <p className="clients__statement">
+            empresas de la industria <strong>automotriz, autopartes, logística y manufacturera</strong> en los
+            principales parques industriales del Bajío
+          </p>
+
+          <ul className="clients__industries">
+            {industries.map((industry, i) => (
+              <li key={industry.label} data-reveal style={delay(120 + i * 90)}>
+                <industry.icon size={22} aria-hidden="true" />
+                {industry.label}
+              </li>
+            ))}
+          </ul>
+
+          <p className="clients__where">
+            <MapPin size={16} aria-hidden="true" />
+            Parques industriales del Bajío
+          </p>
+        </div>
       </div>
     </section>
   )

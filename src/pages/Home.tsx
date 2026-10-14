@@ -1,4 +1,5 @@
 import Certifications from '../components/Certifications'
+import ChatWidget from '../components/ChatWidget'
 import Clients from '../components/Clients'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
@@ -12,6 +13,8 @@ import Risks from '../components/Risks'
 import Services from '../components/Services'
 import Stats from '../components/Stats'
 import Technology from '../components/Technology'
+import UnitsSlider from '../components/UnitsSlider'
+import WhatsAppFloat from '../components/WhatsAppFloat'
 import { AudienceProvider } from '../context/audience'
 import { useReveal } from '../hooks/useReveal'
 import '../styles/landing.css'
@@ -25,6 +28,7 @@ export default function Home() {
       <main>
         <Hero />
         <Stats />
+        <UnitsSlider />
         <Paths />
         <Risks />
         <Services />
@@ -37,6 +41,8 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ChatWidget />
+      <WhatsAppFloat />
     </AudienceProvider>
   )
 }

@@ -1,12 +1,8 @@
-import { Phone } from 'lucide-react'
-import { audienceContact, contact, FOUNDED_YEAR, navLinks, whatsappMessages } from '../data/content'
+import { contact, FOUNDED_YEAR, navLinks } from '../data/content'
 import { useAudience } from '../context/audience'
-import WhatsAppIcon from './WhatsAppIcon'
-import { whatsappLink } from '../lib/whatsapp'
 
 export default function Footer() {
-  const { audience, setAudience } = useAudience()
-  const main = audienceContact[audience]
+  const { setAudience } = useAudience()
 
   return (
     <>
@@ -55,16 +51,6 @@ export default function Footer() {
         </div>
       </footer>
 
-      <div className="sticky-cta">
-        <a href={`tel:${main.tel}`} className="btn btn--ghost">
-          <Phone size={18} aria-hidden="true" />
-          Llamar
-        </a>
-        <a {...whatsappLink(whatsappMessages.general[audience])} className="btn btn--primary">
-          <WhatsAppIcon />
-          {main.ctaShort}
-        </a>
-      </div>
     </>
   )
 }

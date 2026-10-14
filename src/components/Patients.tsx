@@ -1,6 +1,7 @@
 import { MapPin, Phone } from 'lucide-react'
 import { contact, patientReasons, patientServices, whatsappMessages } from '../data/content'
 import { delay, spotlight } from '../lib/ui'
+import FacilitiesCarousel from './FacilitiesCarousel'
 import WhatsAppIcon from './WhatsAppIcon'
 import { whatsappLink } from '../lib/whatsapp'
 
@@ -41,6 +42,13 @@ export default function Patients() {
               </p>
             </article>
           ))}
+        </div>
+
+        <div className="patients__gallery">
+          <p className="patients__gallery-title" data-reveal>
+            Conoce nuestras instalaciones
+          </p>
+          <FacilitiesCarousel />
         </div>
 
         <ul className="patients__reasons" data-reveal>
