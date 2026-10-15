@@ -31,19 +31,27 @@ export const MOBILE_UNIT_COUNT = 4
 export type Audience = 'empresa' | 'paciente'
 
 export const contact = {
-  salesName: 'Yadhira Ramirez Caudillo',
-  salesPhone: '477 138 6879',
-  salesTel: '+524771386879',
+  // Ejecutivas de atención empresarial
+  sales: [
+    { name: 'Noemi Coronilla', text: '472 159 4620', tel: '+524721594620' },
+    { name: 'Yadhira Ramirez Caudillo', text: '477 138 6879', tel: '+524771386879' },
+  ],
   email: 'contacto@mhdelbajio.com',
   phones: [
-    { label: 'Atención empresarial', numbers: [{ text: '477 138 6879', tel: '+524771386879' }] },
+    {
+      label: 'Atención empresarial',
+      numbers: [
+        { text: '472 159 4620', tel: '+524721594620' },
+        { text: '477 138 6879', tel: '+524771386879' },
+      ],
+    },
     { label: 'Oficinas administrativas', numbers: [{ text: '472 723 3581', tel: '+524727233581' }] },
     { label: 'Laboratorio', numbers: [{ text: '472 722 4832', tel: '+524727224832' }] },
     {
       label: 'Clínica',
       numbers: [
-        { text: '472 748 9272', tel: '+524727489272' },
         { text: '472 748 9393', tel: '+524727489393' },
+        { text: '472 722 2763', tel: '+524727222763' },
       ],
     },
   ],
@@ -53,9 +61,9 @@ export const contact = {
 export const audienceContact: Record<Audience, { label: string; detail: string; text: string; tel: string; cta: string; ctaShort: string }> = {
   empresa: {
     label: 'Atención empresarial',
-    detail: contact.salesName,
-    text: '477 138 6879',
-    tel: '+524771386879',
+    detail: 'Noemi Coronilla',
+    text: '472 159 4620',
+    tel: '+524721594620',
     cta: 'Solicitar cotización',
     ctaShort: 'Cotizar',
   },

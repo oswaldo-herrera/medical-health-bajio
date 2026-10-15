@@ -1876,6 +1876,17 @@
   gap: 4rem;
 }
 
+.contact__sales-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.contact__sales-list .contact__sales {
+  margin-top: 0;
+}
+
 .contact__sales {
   display: inline-flex;
   align-items: center;

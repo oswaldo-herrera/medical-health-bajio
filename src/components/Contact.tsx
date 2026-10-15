@@ -76,17 +76,24 @@ export default function Contact() {
             <h2 className="section__title">{copy.title}</h2>
             <p className="section__lead">{copy.lead}</p>
 
-            <a href={`tel:${main.tel}`} className="contact__sales">
-              <span className="contact__sales-icon">
-                <Phone size={22} aria-hidden="true" />
-              </span>
-              <span>
-                <small>
-                  {main.label} · {main.detail}
-                </small>
-                <strong>{main.text}</strong>
-              </span>
-            </a>
+            <div className="contact__sales-list">
+              {(audience === 'empresa'
+                ? contact.sales.map((s) => ({ detail: s.name, text: s.text, tel: s.tel }))
+                : [{ detail: main.detail, text: main.text, tel: main.tel }]
+              ).map((person) => (
+                <a key={person.tel} href={`tel:${person.tel}`} className="contact__sales">
+                  <span className="contact__sales-icon">
+                    <Phone size={22} aria-hidden="true" />
+                  </span>
+                  <span>
+                    <small>
+                      {main.label} · {person.detail}
+                    </small>
+                    <strong>{person.text}</strong>
+                  </span>
+                </a>
+              ))}
+            </div>
 
             <ul className="contact__phones">
               {contact.phones
