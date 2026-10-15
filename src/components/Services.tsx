@@ -23,6 +23,22 @@ function ServiceDetail({ service, withHeader }: { service: Service; withHeader: 
       )}
       <p className="services__intro">{service.intro}</p>
 
+      {service.exams && (
+        <div className="services__exams">
+          <p className="services__list-title">{service.exams.title}</p>
+          <ul>
+            {service.exams.items.map((exam) => (
+              <li key={exam.label}>
+                <span className="services__exam-icon">
+                  <exam.icon size={18} aria-hidden="true" />
+                </span>
+                {exam.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <p className="services__list-title">{service.listTitle}</p>
       <List className={`services__list${service.ordered ? ' services__list--ordered' : ''}`}>
         {service.list.map((item, i) => (

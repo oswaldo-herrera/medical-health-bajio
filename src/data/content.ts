@@ -18,6 +18,7 @@ import {
   Stethoscope,
   Timer,
   UserCheck,
+  Wind,
   UserX,
   type LucideIcon,
 } from 'lucide-react'
@@ -184,6 +185,8 @@ export interface Service {
   ordered?: boolean
   outcomeTitle?: string
   outcome?: string[]
+  // Estudios que puede incluir, mostrados como tarjetas con ícono
+  exams?: { title: string; items: { icon: LucideIcon; label: string }[] }
 }
 
 export const services: Service[] = [
@@ -237,6 +240,17 @@ export const services: Service[] = [
     title: 'Examen periódico a personal expuesto (POE)',
     intro:
       'Revisión médica periódica al personal ocupacionalmente expuesto, con estudios definidos según el área de riesgo y seguimiento hasta cerrar cada caso.',
+    exams: {
+      title: 'Estudios a realizar',
+      items: [
+        { icon: Stethoscope, label: 'Exploración física completa' },
+        { icon: FlaskConical, label: 'Análisis clínicos' },
+        { icon: ScanLine, label: 'Rayos X' },
+        { icon: Ear, label: 'Audiometría' },
+        { icon: Wind, label: 'Espirometría' },
+        { icon: HeartPulse, label: 'Electrocardiograma' },
+      ],
+    },
     listTitle: 'Así lo hacemos',
     ordered: true,
     list: [
