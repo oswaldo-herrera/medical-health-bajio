@@ -19,28 +19,31 @@ export default function Clients() {
           <h2 className="section__title">Las empresas que mueven al Bajío ya cuidan a su gente con nosotros</h2>
         </div>
 
-        <div className="clients__panel" data-reveal>
-          <p className="clients__count">
-            Más de <CountUp end={CLIENT_COUNT} />
-          </p>
-          <p className="clients__statement">
-            empresas de la industria <strong>automotriz, autopartes, logística y manufacturera</strong> en los
-            principales parques industriales del Bajío
-          </p>
+        <div className="clients__wrap" data-reveal>
+          <img className="clients__host" src="/avatar_clientes.webp" alt="" width={311} height={600} aria-hidden="true" />
+          <div className="clients__panel">
+            <p className="clients__count">
+              Más de <CountUp end={CLIENT_COUNT} />
+            </p>
+            <p className="clients__statement">
+              empresas de la industria <strong>automotriz, autopartes, logística y manufacturera</strong> en los
+              principales parques industriales del Bajío
+            </p>
 
-          <ul className="clients__industries">
-            {industries.map((industry, i) => (
-              <li key={industry.label} data-reveal style={delay(120 + i * 90)}>
-                <industry.icon size={22} aria-hidden="true" />
-                {industry.label}
-              </li>
-            ))}
-          </ul>
+            <ul className="clients__industries">
+              {industries.map((industry, i) => (
+                <li key={industry.label} data-reveal style={delay(120 + i * 90)}>
+                  <industry.icon size={22} aria-hidden="true" />
+                  {industry.label}
+                </li>
+              ))}
+            </ul>
 
-          <p className="clients__where">
-            <MapPin size={16} aria-hidden="true" />
-            Parques industriales del Bajío
-          </p>
+            <p className="clients__where">
+              <MapPin size={16} aria-hidden="true" />
+              Parques industriales del Bajío
+            </p>
+          </div>
         </div>
       </div>
     </section>

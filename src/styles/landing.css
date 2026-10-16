@@ -1671,8 +1671,55 @@
   background: var(--color-surface);
 }
 
+/* Avatar que se asoma por detrás del recuadro */
+.clients__wrap {
+  position: relative;
+  max-width: 56rem;
+  margin: 0 auto;
+  padding-top: 8.75rem;
+}
+
+.clients__host {
+  position: absolute;
+  top: 0;
+  right: 2.5rem;
+  z-index: 0;
+  width: auto;
+  height: 11.5rem;
+  filter: drop-shadow(0 10px 14px rgb(4 29 38 / 0.25));
+  transform-origin: bottom center;
+  transition: transform 0.6s var(--ease);
+}
+
+.clients__wrap[data-revealed] .clients__host {
+  animation: host-peek 0.9s var(--ease) 0.4s backwards;
+}
+
+.clients__wrap:hover .clients__host {
+  transform: translateY(-0.4rem) rotate(-2deg);
+}
+
+@keyframes host-peek {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+}
+
+@media (max-width: 40rem) {
+  .clients__wrap {
+    padding-top: 6.75rem;
+  }
+
+  .clients__host {
+    right: 1rem;
+    height: 9rem;
+  }
+}
+
 .clients__panel {
   position: relative;
+  z-index: 1;
   max-width: 56rem;
   margin: 0 auto;
   padding: clamp(2.25rem, 5vw, 3.5rem) clamp(1.5rem, 5vw, 4rem);
