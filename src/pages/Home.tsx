@@ -5,6 +5,7 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import Intro from '../components/Intro'
 import Locations from '../components/Locations'
 import Patients from '../components/Patients'
 import Paths from '../components/Paths'
@@ -24,6 +25,7 @@ export default function Home() {
 
   return (
     <AudienceProvider>
+      <Intro />
       <Header />
       <main>
         <Hero />
