@@ -28,6 +28,8 @@ export const FOUNDED_YEAR = 2012
 // Cifras confirmadas por Medical and Health (octubre 2026)
 export const CLIENT_COUNT = 200
 export const MOBILE_UNIT_COUNT = 4
+// Estudios realizados en unidades móviles, en miles
+export const MOBILE_STUDIES_THOUSANDS = 500
 
 export type Audience = 'empresa' | 'paciente'
 
@@ -37,7 +39,7 @@ export const contact = {
     { name: 'Noemi Coronilla', text: '472 159 4620', tel: '+524721594620' },
     { name: 'Yadhira Ramirez Caudillo', text: '477 138 6879', tel: '+524771386879' },
   ],
-  email: 'contacto@mhdelbajio.com',
+  email: 'redes@mhdelbajio.com',
   phones: [
     {
       label: 'Atención empresarial',
@@ -46,7 +48,7 @@ export const contact = {
         { text: '477 138 6879', tel: '+524771386879' },
       ],
     },
-    { label: 'Oficinas administrativas', numbers: [{ text: '472 723 3581', tel: '+524727233581' }] },
+    { label: 'Oficinas administrativas', numbers: [{ text: '472 748 9194', tel: '+524727489194' }] },
     { label: 'Laboratorio', numbers: [{ text: '472 722 4832', tel: '+524727224832' }] },
     {
       label: 'Clínica',
@@ -89,10 +91,13 @@ export const whatsappMessages = {
   service: (service: string) => `Hola, me interesa cotizar el servicio de "${service}" para mi empresa.`,
   mobileUnit:
     'Hola, me interesa agendar una unidad móvil para realizar exámenes médicos en las instalaciones de mi empresa.',
+  mobileUnitAny:
+    'Hola, me interesa agendar una unidad móvil para realizar estudios médicos (empresa, evento, escuela o grupo).',
   patients: 'Hola, tengo dudas sobre un estudio y quisiera que me orienten sobre cuál necesito y en qué sede realizarlo.',
 }
 
 export const navLinks:{ href: string; label: string; audience?: Audience }[] = [
+  { href: '#soluciones', label: 'Servicios' },
   { href: '#servicios', label: 'Empresas', audience: 'empresa' },
   { href: '#pacientes', label: 'Pacientes', audience: 'paciente' },
   { href: '#unidad-movil', label: 'Unidad móvil' },

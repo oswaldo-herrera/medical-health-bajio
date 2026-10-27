@@ -1,11 +1,11 @@
 import CountUp from './CountUp'
-import { CLIENT_COUNT, FOUNDED_YEAR, MOBILE_UNIT_COUNT } from '../data/content'
+import { CLIENT_COUNT, FOUNDED_YEAR, MOBILE_STUDIES_THOUSANDS } from '../data/content'
 import { delay } from '../lib/ui'
 
 const stats = [
   { end: new Date().getFullYear() - FOUNDED_YEAR, suffix: '', label: `años cuidando a la industria, desde ${FOUNDED_YEAR}` },
   { end: CLIENT_COUNT, prefix: '+', label: 'empresas del Bajío confían en nosotros' },
-  { end: MOBILE_UNIT_COUNT, label: 'unidades móviles que llegan a tu planta' },
+  { end: MOBILE_STUDIES_THOUSANDS, prefix: '+', suffix: ' mil', label: 'estudios realizados en unidades móviles' },
   { end: 100, suffix: '%', label: 'empresa guanajuatense, con 2 sedes en Silao' },
 ]
 

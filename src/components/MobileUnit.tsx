@@ -16,11 +16,9 @@ export default function MobileUnit() {
       <div className="container mobile-unit__inner">
         <div className="section__head" data-reveal>
           <p className="eyebrow eyebrow--light">Unidad de diagnóstico clínica móvil</p>
-          <h2 className="section__title">Llevamos la clínica a tu planta. Tu producción no se detiene.</h2>
-          <p className="section__lead">
-            Unidades móviles totalmente equipadas para aplicar los exámenes médicos en tus instalaciones: optimizas
-            tiempos y costos, evitas traslados de personal y largas ausencias en producción.
-          </p>
+          <h2 className="mobile-unit__statement">
+            Unidades móviles totalmente equipadas para aplicar los exámenes médicos en tus instalaciones.
+          </h2>
         </div>
 
         <div className="mobile-unit__grid">

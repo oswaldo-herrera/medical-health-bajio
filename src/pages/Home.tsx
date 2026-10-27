@@ -12,6 +12,7 @@ import Paths from '../components/Paths'
 import MobileUnit from '../components/MobileUnit'
 import Risks from '../components/Risks'
 import Services from '../components/Services'
+import Solutions from '../components/Solutions'
 import Stats from '../components/Stats'
 import Technology from '../components/Technology'
 import UnitsSlider from '../components/UnitsSlider'
@@ -31,6 +32,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <UnitsSlider />
+        <Solutions />
         <Paths />
         <Risks />
         <Services />

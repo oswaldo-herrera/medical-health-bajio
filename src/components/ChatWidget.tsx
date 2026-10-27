@@ -111,7 +111,7 @@ export default function ChatWidget() {
             aria-label="Ocultar mensaje"
             onClick={() => setShowBubble(false)}
           >
-            <X size={14} />
+            <X size={11} />
           </button>
         </div>
       )}
