@@ -3,7 +3,7 @@ import { Send, X } from 'lucide-react'
 import WhatsAppIcon from './WhatsAppIcon'
 import { useAudience } from '../context/audience'
 import { whatsappMessages } from '../data/content'
-import { WHATSAPP_FLOAT_NUMBER, whatsappUrl } from '../lib/whatsapp'
+import { whatsappUrl } from '../lib/whatsapp'
 
 // Botón flotante de WhatsApp con ventana para escribir el mensaje antes de enviarlo
 export default function WhatsAppFloat() {
@@ -33,7 +33,7 @@ export default function WhatsAppFloat() {
   function send(e?: FormEvent) {
     e?.preventDefault()
     const message = text.trim() || whatsappMessages.general[audience]
-    window.open(whatsappUrl(message, WHATSAPP_FLOAT_NUMBER), '_blank', 'noopener,noreferrer')
+    window.open(whatsappUrl(message), '_blank', 'noopener,noreferrer')
     setText('')
     setOpen(false)
   }

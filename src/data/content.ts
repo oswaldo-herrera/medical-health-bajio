@@ -36,7 +36,7 @@ export type Audience = 'empresa' | 'paciente'
 export const contact = {
   // Ejecutivas de atención empresarial
   sales: [
-    { name: 'Noemi Coronilla', text: '472 159 4620', tel: '+524721594620' },
+    { name: 'Noemi Coronilla', text: '472 101 0133', tel: '+524721010133' },
     { name: 'Yadhira Ramirez Caudillo', text: '477 138 6879', tel: '+524771386879' },
   ],
   email: 'redes@mhdelbajio.com',
@@ -44,7 +44,7 @@ export const contact = {
     {
       label: 'Atención empresarial',
       numbers: [
-        { text: '472 159 4620', tel: '+524721594620' },
+        { text: '472 101 0133', tel: '+524721010133' },
         { text: '477 138 6879', tel: '+524771386879' },
       ],
     },
@@ -65,8 +65,8 @@ export const audienceContact: Record<Audience, { label: string; detail: string; 
   empresa: {
     label: 'Atención empresarial',
     detail: 'Noemi Coronilla',
-    text: '472 159 4620',
-    tel: '+524721594620',
+    text: '472 101 0133',
+    tel: '+524721010133',
     cta: 'Solicitar cotización',
     ctaShort: 'Cotizar',
   },
