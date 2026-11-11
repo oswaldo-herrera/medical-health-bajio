@@ -8,7 +8,7 @@ export default function MobileUnit() {
   return (
     <section className="section section--dark mobile-unit" id="unidad-movil">
       <div className="mobile-unit__bg" aria-hidden="true">
-        {['/unidad_01.webp', '/unidad_02.webp', '/unidad_03.webp'].map((src) => (
+        {['/unidad_03.webp', '/unidad_medica/um_07.webp', '/unidad_medica/um_08.webp'].map((src) => (
           <span key={src} style={{ backgroundImage: `url(${src})` }} />
         ))}
       </div>

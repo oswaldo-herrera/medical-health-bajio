@@ -32,7 +32,6 @@ const solutions: Solution[] = [
     images: [
       { src: um(7), alt: 'Unidades móviles y módulo de atención en planta' },
       { src: um(2), alt: 'Equipo médico de Medical and Health junto a la unidad móvil' },
-      { src: '/unidad_02.webp', alt: 'Atención en sitio con unidad móvil' },
       { src: '/puerto_interior.webp', alt: 'Unidad médica en Guanajuato Puerto Interior' },
       { src: '/silao_centro_buena.webp', alt: 'Laboratorio y gabinete en Silao Zona Centro' },
     ],
@@ -45,9 +44,8 @@ const solutions: Solution[] = [
     text: 'Dirigidos a candidatos que se incorporan a empresas de la industria automotriz, con la posibilidad de ofrecer evaluaciones integrales de acuerdo con los requerimientos de cada cliente.',
     highlights: ['Especialistas en la industria automotriz', 'Evaluaciones integrales a la medida', 'Resultados claros para contratar'],
     avatar: '/avatar_clientes.webp',
-    cover: '/int_01.webp',
+    cover: '/int_02.webp',
     images: [
-      { src: '/int_01.webp', alt: 'Sala de espera' },
       { src: '/int_02.webp', alt: 'Recepción y atención' },
       { src: um(11), alt: 'Registro de candidatos en sitio' },
       { src: '/int_03.webp', alt: 'Estudio de ultrasonido' },
@@ -64,7 +62,6 @@ const solutions: Solution[] = [
     cover: '/silao_centro_buena.webp',
     images: [
       { src: '/silao_centro_buena.webp', alt: 'Laboratorio Medical and Health en Silao Zona Centro' },
-      { src: '/int_05.webp', alt: 'Toma de muestras en unidad móvil' },
       { src: um(11), alt: 'Recepción de muestras y registro en sitio' },
       { src: '/int_02.webp', alt: 'Recepción del laboratorio' },
     ],
@@ -82,7 +79,6 @@ const solutions: Solution[] = [
       { src: '/int_04.webp', alt: 'Área de atención médica' },
       { src: '/int_03.webp', alt: 'Médico especialista realizando estudio' },
       { src: um(4), alt: 'Equipo de personal médico y de enfermería' },
-      { src: '/int_01.webp', alt: 'Consultorio y sala de espera' },
     ],
   },
 ]
